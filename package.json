@@ -1,0 +1,12 @@
+{
+  "name": "cwp-26",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "latest",
+    "joi": "^13.1.2",
+    "lru-cache": "^4.1.2",
+    "sequelize": "^4.37.2",
+    "sqlite3": "^4.0.0"
+  }
+}
