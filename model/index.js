@@ -11,7 +11,7 @@ module.exports = (Sequelize, config)=>
             dialect: 'sqlite',
             storage: './dataBase',
             define: {
-                timestamps: true,
+                timestamps: false,
                 paranoid: true
             }
         });

@@ -16,7 +16,7 @@ const schemas = {
 
     'workPeriod': Joi.object().keys({
         from: Joi.string().max(50).min(1),
-        to: Joi.string().email().max(50).min(1),
+        to: Joi.string().max(50).min(1),
         weekDays: Joi.string().max(50).min(1),
     }),
 };

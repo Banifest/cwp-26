@@ -35,7 +35,6 @@ module.exports = class Crud
     async read(req, res)
     {
         let answ = await this.service.readById(req.params.id);
-        this.cache.set(req, answ);
         res.json(answ);
     };
     async paramRead(req, res)

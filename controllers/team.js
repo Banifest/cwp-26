@@ -1,10 +1,15 @@
 const sequelize = require('sequelize');
-const c = require('./crud');
+
+class Team extends require('./crud')
+{
+    constructor()
+    {
+        super(new (require('../services/team'))());
+        this.registerRouters();
+    }
+}
 
 module.exports = (settings)=>
 {
-    let crud = new c(new (require('../services/team'))());
-    crud.registerRouters();
-
-    return crud.router;
+    return (new Team()).router;
 };
