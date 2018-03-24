@@ -6,4 +6,6 @@ module.exports = class WorkPeriod extends require('./crud')
     {
         super(db.workPeriod, 'workPeriod');
     }
+
+
 };
