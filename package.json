@@ -6,9 +6,10 @@
     "express": "latest",
     "joi": "^13.1.2",
     "lru-cache": "^4.1.2",
+    "moment": "latest",
     "sequelize": "^4.37.2",
     "sqlite3": "^4.0.0",
     "winston": "^2.4.1",
-    "moment": "latest"
+    "yamljs": "^0.3.0"
   }
 }

@@ -42,14 +42,14 @@ module.exports = class Crud
 
     async readById(id)
     {
-        if (!isNaN(id) && (await this.model.findById(Number(id))) != null)
-        {
-            return await (await this.model.findById(Number(id))).get({plain: true});
-        }
-        else
-        {
-            throw this.errors.notFound;
-        }
+            if (!isNaN(id) && (await this.model.findById(Number(id))) != null)
+            {
+                return await (await this.model.findById(Number(id))).get({plain: true});
+            }
+            else
+            {
+                throw this.errors.notFound;
+            }
     }
 
     async create(data)

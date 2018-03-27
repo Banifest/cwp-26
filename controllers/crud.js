@@ -1,5 +1,6 @@
 const express = require('express');
 const wrap = require('../helpers/wrap');
+const sendData = require('../helpers/sendData');
 
 module.exports = class Crud
 {
@@ -29,31 +30,29 @@ module.exports = class Crud
     }
     async readAll(req, res)
     {
-        let answ = await this.service.readAll();
-        res.json(answ);
+        sendData(res, await this.service.readAll(), req.header('accept'));
     };
     async read(req, res)
     {
-        let answ = await this.service.readById(req.params.id);
-        res.json(answ);
+        sendData(res, await this.service.readById(req.params.id), req.header('accept'));
     };
     async paramRead(req, res)
     {
-        res.json(await this.service.readByOption(req.body));
+        sendData(res, await this.service.readByOption(req.body), req.header('accept'));
     };
     async create(req, res)
     {
-        res.json(await this.service.create(req.body));
+        sendData(res, await this.service.create(req.body), req.header('accept'));
     };
     async update(req, res)
     {
         let id = req.body.id;
         delete req.body.id;
-        res.json(await this.service.updateById(id, req.body));
+        sendData(res, await this.service.updateById(id, req.body), req.header('accept'));
     };
     async delete(req, res)
     {
-        res.json(await this.service.deleteById(req.body.id));
+        sendData(res, await this.service.deleteById(req.body.id), req.header('accept'));
     };
     registerRouters()
     {

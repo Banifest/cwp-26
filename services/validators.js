@@ -6,7 +6,7 @@ const schemas = {
         email: Joi.string().email().max(50).min(1),
         timezone: Joi.string().max(3).min(1),
         validated: Joi.boolean(),
-        tel: Joi.string().max(50).min(1),
+        validationToken: Joi.string().max(50).min(1),
     }),
 
     'team': Joi.object().keys({

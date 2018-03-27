@@ -22,6 +22,9 @@ module.exports = {
     wrongCredentials: {
         message: 'Email or password are wrong',
         code: 'wrong_credentials', status: 404 },
+    validateError: {
+        message: 'Wrong data for validate',
+        code: 'wrong_data', status: 401 },
     accessDenied: {
         message: 'Access denied',
         code: 'access_denied', status: 403 }
